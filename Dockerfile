@@ -13,7 +13,8 @@ RUN set -ex; \
         git \
         rclone \
         tar \ 
-        unzip;
+        unzip \
+        zip;
 
 RUN set -ex; \
     apk add --no-cache \
