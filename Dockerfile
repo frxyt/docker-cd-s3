@@ -11,7 +11,9 @@ RUN set -ex; \
         ca-certificates \
         curl \
         git \
-        rclone;
+        rclone \
+        tar \ 
+        unzip;
 
 RUN set -ex; \
     apk add --no-cache \
