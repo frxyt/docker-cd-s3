@@ -32,6 +32,9 @@ RUN set -ex; \
     python --version; \
     s3cmd --version; \
     rclone --version;
+
+COPY ./bin /usr/local/bin
+
 WORKDIR /work
 
 ENTRYPOINT [ "/bin/bash", "-lc" ]

@@ -1,0 +1,16 @@
+#!/bin/bash
+
+if [ -z "${1}" ]; then
+    echo 'Usage: printprefixedenv VARIABLE'
+    echo 'Will print the content of ${ENV_PREFIX}VARIABLE if found or VARIABLE otherwise.'
+    exit 1;
+fi
+
+prefixed_name="${ENV_PREFIX}${1}"
+prefixed_value="${!prefixed_name}"
+
+if [ -z "${prefixed_value}" ]; then
+    echo "${!1}"
+else
+    echo "${prefixed_value}"
+fi
